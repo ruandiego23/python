@@ -1,0 +1,16 @@
+[python]
+1000000000
+python counter-time.py  82,94s user 0,08s system 100% cpu 1:23,01 total
+
+[javascript]
+1000000000
+node counter-time.js  0,39s user 0,03s system 92% cpu 0,454 total
+
+[python]
+Sum of list using a sum generator: 44999999850000000
+Time of list creation: 11.013993978500366 seconds
+Execution time: 00:00:11
+
+Sum of list using a sum generator: 44999999850000000
+Time of list creation: 1.1958823204040527 seconds
+Execution time: 00:00:01
