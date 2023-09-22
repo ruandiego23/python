@@ -8,20 +8,20 @@ one. This is, in fact, the case. To show how it works, let’s create a few clas
 
 class Calculator:
 
-    def __init__(self):
-        self.value = None
-
     def calculate(self, expression):
         self.value = eval(expression)
 
 
-class Talker(Calculator):
+class Talker:
+
+    def __init__(self):
+        self.value = None
 
     def talk(self):
         print(f"Hy, my value is {self.value}")
 
 
-class TalkingCalculator(Talker):
+class TalkingCalculator(Calculator, Talker):
     pass
 
 

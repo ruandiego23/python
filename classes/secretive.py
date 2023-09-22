@@ -1,7 +1,8 @@
 
 class Secretive:
 
-    def __inaccessible(self):
+    @staticmethod
+    def __inaccessible():
         print("Bet you can't see me ...")
 
     def accessible(self):
