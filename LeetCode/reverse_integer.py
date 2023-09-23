@@ -2,12 +2,13 @@ import math
 
 
 class ReverseInteger:
-    def reverse(self, x: int) -> int:
+    @staticmethod
+    def reverse(x: int) -> int:
 
         MIN = -2147483648  # -2^31,
         MAX = 2147483647  # 2^31 - 1
 
-        res = int()
+        res = 0
         while x:
             digit = int(math.fmod(x, 10))  # (python dumb) -1 % 10 = 9
             x = int(x / 10)                    # (python dumb) -1 // 10 = -1
@@ -25,4 +26,4 @@ class ReverseInteger:
 
 
 obj = ReverseInteger()
-print(obj.reverse(-2147483648))
+print(obj.reverse(3612875))

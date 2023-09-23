@@ -15,7 +15,7 @@ while True:
         z = x / y
         print(z)
 
-    except Exception as e:
+    except Exception as e:  # or can be just expect
         print('Invalid input:', e)
         print('Please try again')
     else:
