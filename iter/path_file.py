@@ -2,15 +2,17 @@ import pathlib
 
 
 def analyze_data(file: str):
-    try:
-        data = pathlib.Path(file).read_text()
-        # analyze the data
-    except FileNotFoundError:
-        print(f'Does not exist, exiting: {file}')
-    except IsADirectoryError:
-        print(f'Does not exist directory, dir: {file}')
-    else:
-        print(data)
+    while True:
+        try:
+            data = pathlib.Path(file).read_text()
+            # analyze the data
+        except FileNotFoundError:
+            print(f'Does not exist, exiting: {file}')
+        except IsADirectoryError:
+            print(f'Does not exist directory, dir: {file}')
+        else:
+            print(data)
+            break
 
 
 analyze_data('/home/diego/Documentos/N+1.txt')

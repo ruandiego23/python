@@ -2,7 +2,7 @@ class Person:
     eyes = 2
 
     def __init__(self, *children, name: str = None, age: int = None, country: str = None):
-        self.children = list(children)
+        self.children = ", ".join(list(children))
         self.name = name
         self.age = age
         self.country = country
@@ -21,7 +21,6 @@ class Person:
 class Man(Person):
 
     def greetings_of_man(self):
-        #
         greeting_of_a_man = super().greetings()
         return f'{greeting_of_a_man}.\nShake hand!'
 
@@ -30,19 +29,14 @@ class Man(Person):
             f'\tName: {self.name}\n'
             f'\tAge: {self.age}\n'
             f'\tCountry: {self.country}\n'
+            f'\tChildren: {self.children}\n'
         )
 
 
 if __name__ == '__main__':
     diego = Man(name='Diego')
     juan = Man(name='Juan')
-    olavo = Man(diego, juan, age=74, country='Brazil', name='Olavo')
+    olavo = Man(diego.name, juan.name, name='Olavo', age=74, country='Brazil', )
 
     print(olavo.greetings_of_man())
     print(str(olavo))
-
-
-    def children_name():
-        kids = [child.name for child in olavo.children]
-        print(*kids)
-    children_name()

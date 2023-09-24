@@ -1,4 +1,3 @@
-from math import inf
 
 
 def try_function():
@@ -8,12 +7,12 @@ def try_function():
     """
     while True:
         try:
-            number: float = float(input('Type a number: '))
-        except ValueError:
-            print("It isn't a number")
+            number: int = int(input('Type a number: '))
+        except ValueError as ve:
+            print("It isn't a number!\n", ve)
         else:
-            if -inf < number > 0:
-                print(f"It is a Number: {number}")
+            if 0 <= number < 10:
+                print(f"It is a Decimal Number: {number}")
                 break
             else:
                 print('The number has typed is invalid!\n'
