@@ -25,9 +25,6 @@ class ArithmeticSequence:
         self.step = step  # Store the step value
         self.changed = {}  # No items have been modified
 
-    def __len__(self):
-        len(self.changed)
-
     def __getitem__(self, key):
         """
         Get an item from the arithmetic sequence.
@@ -51,4 +48,4 @@ s = ArithmeticSequence(1, 3)
 for f in s:
     if f > 20:
         break
-    print(len(f))
+    print(f, end=" ")

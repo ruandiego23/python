@@ -4,8 +4,6 @@
     Card(rank='7', suit='cats')
 
 """
-
-
 import collections
 from itertools import product
 from random import choice
