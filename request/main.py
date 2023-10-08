@@ -1,26 +1,15 @@
 import requests
 
 
-def buscar_avatar(usuario):
+def buscar_avatar(user):
     """
-    Busca o avatar de um usuário no Github
+    Search an avatar of GitHub user
 
-    :param usuario: str com o nome de usuário no github
-    :return: str com o link do avatar
+    :param user: str with a GitHub username
+    :return: str contains the avatar link
     """
 
-    url = f'https://api.github.com/users/{usuario}'
+    url = f"https://api.github.com/users/{user}"
     resp = requests.get(url)
 
     return resp.json()['avatar_url']
-
-    # while True:
-    #     try:
-    #         url = f'https://api.github.com/users/{usuario}'
-    #         resp = requests.get(url)
-    #     except KeyError:
-    #         print("Este usuário não existe")
-    #     else:
-    #         print(resp.json()['avatar_url'])
-    #         print('Avatar do usuário')
-    #         break

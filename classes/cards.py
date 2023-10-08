@@ -12,7 +12,7 @@ from random import choice
 Card = collections.namedtuple('Card', ['rank', 'suit'])
 
 """
-Instead of using the function "namedtuple", you can create your own class as below: 
+Instead of using the function "namedtuple", you can create your own class as below:
 
 class Carta:
     def __init__(self, valor, naipe):
