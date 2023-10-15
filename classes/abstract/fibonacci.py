@@ -40,6 +40,6 @@ class Fibonacci:
 
 if __name__ == '__main__':
     fib = Fibonacci()
-    print()
+    print("Fibonacci sequence below:")
     for _ in range(7):
         print(next(fib), end=" ")

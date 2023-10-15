@@ -19,12 +19,16 @@ analyze_data('/home/diego/Documentos/N+1.txt')
 
 
 def your_options():
-    path = pathlib.Path("path", "to", "some", "file.txt")
+    path = pathlib.Path("/home/diego/Documentos")
     # path.exists() -> os.path.exists(path)
     # path.is_file() -> os.path.isfile(path)
     # path.is_dir() -> os.path.isdir(path)
     if path.exists():
         print('Found')
+        if path.is_dir():
+            print("It's a directory")
+        if path.is_file():
+            print("It's a file")
     else:
         print('Not found')
 

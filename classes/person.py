@@ -8,7 +8,7 @@ class Person:
         self.country = country
 
     def greetings(self):
-        greeting = f'Hello, my name is {self.name}'
+        greeting = f'Hello, my name is {self.name}.\n'
         return greeting
 
     @classmethod
@@ -22,7 +22,7 @@ class Man(Person):
 
     def greetings_of_man(self):
         greeting_of_a_man = super().greetings()
-        return f'{greeting_of_a_man}.\nShake hand!'
+        return f'{greeting_of_a_man}\tShake hand!'
 
     def __str__(self):
         return (
@@ -36,7 +36,9 @@ class Man(Person):
 if __name__ == '__main__':
     diego = Man(name='Diego')
     juan = Man(name='Juan')
-    olavo = Man(diego.name, juan.name, name='Olavo', age=74, country='Brazil', )
+    olavo = Man(diego.name, juan.name, name='Olavo', age=74, country='Brazil')
 
     print(olavo.greetings_of_man())
-    print(str(olavo))
+    print()
+    print(olavo)
+    print(diego)

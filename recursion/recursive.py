@@ -15,6 +15,14 @@ def power(x, n):
         return result
 
 
+def mul(x, y):
+    if y == 1:
+        return x
+    result = x * mul(x, y - 1)
+    return result
+
+
 if __name__ == "__main__":
     print(factorial(5))
     print(power(5, 3))
+    print(mul(5, 25))
