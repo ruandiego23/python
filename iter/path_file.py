@@ -10,9 +10,8 @@ def analyze_data(file: str):
             print(f'Does not exist, exiting: {file}')
         except IsADirectoryError:
             print(f'Does not exist directory, dir: {file}')
-        else:
-            print(data)
-            break
+        except Exception as e:
+            raise e
 
 
 analyze_data('/home/diego/Documentos/N+1.txt')

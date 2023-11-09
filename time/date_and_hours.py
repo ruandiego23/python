@@ -4,9 +4,9 @@ import string
 
 def date_hour():
     today = date.today()
-    print('Hoje é:', today)
-    print('Partes da data é', today.day, today.month, today.year)
-    print('Número do dia da semana:', today.weekday())
+    print('Today is:', today)
+    print('Parts of data are:', today.day, today.month, today.year)
+    print('Number of the week days:', today.weekday() + 1)
     days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     days_string = " ".join(days)
     days_upper = string.capwords(days_string)

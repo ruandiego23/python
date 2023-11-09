@@ -11,6 +11,10 @@ class Person:
         greeting = f'Hello, my name is {self.name}.\n'
         return greeting
 
+    @staticmethod
+    def metodo_estatico():  # independe do objeto
+        return 42
+
     @classmethod
     def atributes_names_of_class(cls):
         # Access class data
@@ -37,8 +41,31 @@ if __name__ == '__main__':
     diego = Man(name='Diego')
     juan = Man(name='Juan')
     olavo = Man(diego.name, juan.name, name='Olavo', age=74, country='Brazil')
-
+    olavo.last_name = 'de Carvalho'  # dynamic attribute
     print(olavo.greetings_of_man())
     print()
     print(olavo)
     print(diego)
+    print(id(olavo))
+    print(olavo.name)
+    print(olavo.age)
+    del olavo.children
+    olavo.eyes = 1
+    del olavo.eyes  # apagando o atributo do objeto e não da classe
+    print(olavo.name, olavo.last_name)
+    print(olavo.__dict__)  # o tunder dict consegue acessar a lista de atributos do objeto
+    print(diego.__dict__)
+    print(Person.eyes)
+    print(olavo.eyes)
+    print(diego.eyes)
+    print(id(diego.eyes), id(Person.eyes), id(olavo.eyes))
+    print(Person.metodo_estatico(), olavo.metodo_estatico())
+    print(Person.atributes_names_of_class(), olavo.atributes_names_of_class())
+    pessoa = Person('Anônimo')
+    print(isinstance(pessoa, Person))
+    print(isinstance(pessoa, Man))  # a funçao isinstance serve para verificar se um objeto faz parte de uma classe
+    print(isinstance(diego, Person))
+    print(isinstance(olavo, Person))
+    print(diego.eyes)
+    print(diego.greetings_of_man())
+    print(olavo.greetings_of_man())

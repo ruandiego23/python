@@ -21,7 +21,7 @@ print()
 st_np = time.time()
 # lista_np = (x for x in range(100_000_000))
 # soma_np = np.sum(np.fromiter(lista_np, int))  # use dtype= or float, but int is more efficient in this case
-soma_np = np.sum(np.arange(100000000, dtype=int))
+soma_np = np.sum(np.arange(100_000_000, dtype=int))
 et_np = time.time()
 
 final_np = et_np - st_np
@@ -40,7 +40,7 @@ print()
 # minimizes the influence of other tasks running on your operating system. Due to this, we can get the more accurate
 # average execution time.
 def addition():
-    print('Sum of list using numpy and timeit:', np.sum(np.arange(100000000, dtype=int)))
+    print('Sum of list using numpy and timeit:', np.sum(np.arange(100_000_000, dtype=int)))
 
 
 result = timeit.timeit(addition, number=1)
